@@ -6,42 +6,45 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 18:30:24 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/02 17:09:11 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/02 21:25:56 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	unsigned char *dest;
-	unsigned char *source;
+	size_t			i;
+	char			step;
+	unsigned char	*dest;
+	unsigned char	*source;
 
 	dest = (unsigned char *)dst;
 	source = (unsigned char *)src;
 	i = 0;
 	if (dst > src)
 	{
-		
+		step = -1;
+		dest = (unsigned char *)(dst + len - 1);
+		source = (unsigned char *)(src + len - 1);
 	}
 	while (i < len)
 	{
-		dst[i] = src[i];
-		
+		*dest = *source;
+		dest = dest + step;
+		source += step;
+		i++;
 	}
 	return (dst);
 }
-*/
 
 #include <stdio.h>
 #include <string.h>
 
 int		main(void)
 {
-	char str1[] = {};
-	char *str2 = NULL;
-
-	//memmove(str1, str2, 3);
-	printf("%p\n", str1);
+	char str1[] = "Hello my name is Jiyong!";
+	//memmove(str1 + 17, str1, 5);
+	ft_memmove(str1 + 17, str1, 5);
+	printf("%s\n", str1);
 }
