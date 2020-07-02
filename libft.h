@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 22:23:00 by seojeong          #+#    #+#             */
-/*   Updated: 2020/06/29 22:47:19 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/02 22:46:16 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ typedef struct	s_list
 	void	*content;
 	struct s_list *next;
 }				t_list;
+void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+
+
 
 #endif
