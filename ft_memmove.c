@@ -1,4 +1,4 @@
-/ ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 18:30:24 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/03 22:41:21 by seoyoungj        ###   ########.fr       */
+/*   Updated: 2020/07/03 23:17:25 by seoyoungj        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	dest = (unsigned char *)dst;
 	source = (unsigned char *)src;
 	i = 0;
+	if (!dst || !src)
+		return (0);
 	if (dst > src)
 	{
 		step = -1;
@@ -31,7 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	while (i < len)
 	{
 		*dest = *source;
-		dest = dest + step;
+		dest += step;
 		source += step;
 		i++;
 	}

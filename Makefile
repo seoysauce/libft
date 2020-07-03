@@ -6,7 +6,7 @@
 #    By: seojeong <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/02 22:28:17 by seojeong          #+#    #+#              #
-#    Updated: 2020/07/02 22:41:57 by seojeong         ###   ########.fr        #
+#    Updated: 2020/07/03 22:50:06 by seoyoungj        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,9 @@ FLAG	= -Wall -Wextra -Werror
 OPTION	= -c
 HEADER  = includes
 
-all: ${NAME}
+all: $(NAME)
 
-${NAME}: ${OBJECT}
+$(NAME): ${OBJECT}
 	ar rc $(NAME) $(OBJECT)
 
 .c.o:
