@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 21:30:21 by seojeong          #+#    #+#             */
-/*   Updated: 2020/06/29 22:58:40 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/03 22:40:58 by seoyoungj        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
+/*
 #include <stdio.h>
 int		main(void)
 {
@@ -31,3 +31,4 @@ int		main(void)
 	ft_bzero(str, 4);
 	printf("%s\n", str);
 }
+*/

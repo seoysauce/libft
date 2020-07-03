@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 19:57:37 by seojeong          #+#    #+#             */
-/*   Updated: 2020/06/29 22:48:21 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/03 22:40:01 by seoyoungj        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memset(void *str, int c, size_t len)
 	}
 	return (str);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -41,3 +41,4 @@ int		main(void)
 	//new2 = memset(str, '-', 4);
 	//printf("%s\n", new2);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 15:59:58 by seojeong          #+#    #+#             */
-/*   Updated: 2020/06/30 18:28:30 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/03 22:39:29 by seoyoungj        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src,
 	}
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int		main(void)
@@ -41,3 +41,4 @@ int		main(void)
 	//memccpy(str1, str2, 'c', 5);
 	printf("%s\n", str1);
 }
+*/
