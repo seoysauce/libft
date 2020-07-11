@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/05 18:01:22 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/12 00:17:39 by seojeong         ###   ########.fr       */
+/*   Created: 2020/07/11 23:59:17 by seojeong          #+#    #+#             */
+/*   Updated: 2020/07/12 00:47:48 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (s[len])
+	i = 0;
+	while (s[i])
+		i++;
+	while (i >= 0)
 	{
-		len++;
+		if (s[i] == c)
+			return ((char *)s+i);
+		i--;
 	}
-	return (len);
+	return (NULL);
 }
-
 /*
-** #include <string.h>
-** #include <stdio.h>
-** int		main(void)
-** {
-** 	char *str = "Hello world!";
-**
-** 	printf("%lu\n", ft_strlen(str));
-** }
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	printf("%s\n", ft_strrchr("hello world!", '\0'));
+}
 */
