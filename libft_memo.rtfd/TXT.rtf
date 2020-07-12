@@ -267,7 +267,14 @@ Strlcpy\
 \
 Strlcat\
 \
-\'97\'97\'97\'97\'97\
+size_t	strlcat(char * restrict dst, const char * restrict src, size_t dstsize);\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic 스크린샷 2020-07-12 오전 3.06.58.png \width13740 \height2420 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}�}
+\fs26 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\
 \
 Strchr\
 \
@@ -323,7 +330,9 @@ strchr
 \
 \'97\'97\'97\'97\'97\'97\
 \
-Strnstr\
+Strnstr - 
+\f0 \'bc\'ad\'ba\'ea\'bd\'ba\'c6\'ae\'b8\'b5 \'c3\'a3\'b1\'e2
+\f1 \
 \
 Char	*strnstr(const char *haystack, const char *needle, size_t Len);\
 \
@@ -334,8 +343,136 @@ Haystack
 \f0 \'c0\'cc\'c8\'c4\'bf\'a1 \'bf\'c0\'b4\'c2 \'c4\'b3\'b8\'af\'c5\'cd\'b4\'c2 \'b0\'cb\'bb\'f6\'b5\'c7\'c1\'f6 \'be\'ca\'c0\'bd.
 \f1 \
 \
+haystack
+\f0 \'bf\'a1\'bc\'ad
+\f1  needle
+\f0 \'c0\'c7
+\f1  
+\f0 \'c3\'b9\'b9\'f8\'c2\'b0 \'bd\'c3\'c0\'db \'c0\'a7\'c4\'a1\'bf\'a1 \'b4\'eb\'c7\'d1 \'c6\'f7\'c0\'ce\'c5\'cd\'b8\'a6 \'b8\'ae\'c5\'cf\
+needle\'c0\'cc haystack\'bf\'a1\'bc\'ad \'b3\'aa\'c5\'b8\'b3\'aa\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 NULL\'b8\'ae\'c5\'cf\
+Needle\'c0\'cc \'b1\'e6\'c0\'cc\'b0\'a1 0\'c0\'ce \'bd\'ba\'c6\'ae\'b8\'b5\'c0\'bb \'b0\'a1\'b8\'ae\'c5\'b0\'b8\'e9 haystack \'b8\'ae\'c5\'cf
+\f1 \
+\
 *Since the strnstr() function is a FreeBSD specific API, it should only be used when portability is not a concern.\
 \
+\'97\'97\'97\'97\'97\
+\
+
+\fs30 Strncmp - 
+\f0 \'bd\'ba\'c6\'ae\'b8\'b5
+\f1  
+\f0 \'ba\'f1\'b1\'b3
+\f1 \
+\
+int	strncmp(const char *s1, const char *s2, size_t n);\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 strcmp\'bf\'cd \'b4\'de\'b8\'ae n\'b0\'b3 \'c4\'b3\'b8\'af\'c5\'cd\'b1\'ee\'c1\'f6\'b8\'b8 \'ba\'f1\'b1\'b3. \'a1\'ae\\0\'a1\'af \'b4\'d9\'c0\'bd\'bf\'a1 \'b3\'aa\'c5\'b8\'b3\'aa\'b4\'c2 \'c4\'b3\'b8\'af\'c5\'cd\'b5\'e9\'c0\'ba \'ba\'f1\'b1\'b3\'b5\'c7\'c1\'f6 \'be\'ca\'c0\'bd.
+\f1 \
+\
+
+\f0 \'b0\'b0\'c0\'b8\'b8\'e9
+\f1  0 
+\f0 \'b9\'dd\'c8\'af
+\f1 \
+
+\f0 \'b4\'d9\'b8\'a3\'b8\'e9
+\f1  
+\f0 \'c2\'f7\'c0\'cc
+\f1  
+\f0 \'b9\'dd\'c8\'af
+\f1 \
+\
+memcmp
+\f0 \'bf\'cd
+\f1  
+\f0 \'b4\'de\'b8\'ae
+\f1  
+\f0 \'c1\'df\'b0\'a3\'bf\'a1
+\f1  NULL
+\f0 \'c0\'cc\'bf\'c0\'b8\'e9 \'ba\'f1\'b1\'b3 \'c1\'be\'b7\'e1 (memcmp\'b4\'c2 \'c1\'a4\'c8\'ae\'c8\'f7 n\'b9\'d9\'c0\'cc\'c6\'ae\'b1\'ee\'c1\'f6 \'b8\'f0\'b5\'ce \'b8\'de\'b8\'f0\'b8\'ae \'ba\'f1\'b1\'b3)
+\f1 \
+\
+\'97\'97\'97\'97\'97\'97\
+\
+Atoi - 
+\f0 \'b9\'ae\'c0\'da
+\f1  
+\f0 \'bd\'ba\'c6\'ae\'b8\'b5\'c0\'bb
+\f1  
+\f0 \'c1\'a4\'bc\'f6\'b7\'ce
+\f1  
+\f0 \'ba\'af\'c8\'af
+\f1\fs36 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs32 \cf0 <stdlib.h>\
+\
+int	atoi(const char *str);\
+\
+
+\f0 \'bc\'b1\'c7\'e0
+\f1  
+\f0 \'b0\'f8\'b9\'e9 \'b9\'ae\'c0\'da(whitespace) \'b9\'ab\'bd\'c3
+\f1 \
+\
+
+\f0 \'c0\'d4\'b7\'c2
+\f1  
+\f0 \'b9\'ae\'c0\'da\'b8\'a6
+\f1  
+\f0 \'bc\'fd\'c0\'da\'b7\'ce
+\f1  
+\f0 \'c7\'d8\'bc\'ae\'c7\'cf\'bf\'a9
+\f1  
+\f0 \'bb\'fd\'bc\'ba\'b5\'c7\'b4\'c2 int\'b0\'aa \'b8\'ae\'c5\'cf\
+(\'ba\'af\'c8\'af\'c7\'d2 \'bc\'f6 \'be\'f8\'b4\'c2 \'b0\'e6\'bf\'ec 0 \'b8\'ae\'c5\'cf)\
+\'b8\'ae\'c5\'cf\'b0\'aa\'c0\'ba \'bf\'c0\'b9\'f6\'c7\'c3\'b7\'ce\'bf\'ec\'c0\'c7 \'b0\'e6\'bf\'ec \'c1\'a4\'c0\'c7\'b5\'c7\'c1\'f6 \'be\'ca\'c0\'bd\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 
+\f1 \
+\
+isalpha - 
+\f0 \'be\'cb\'c6\'c4\'ba\'aa\'c0\'ce\'c1\'f6 \'c5\'d7\'bd\'ba\'c6\'ae (\'a1\'aea\'a1\'af~\'a1\'afz\'a1\'af, \'a1\'aeA\'a1\'af~\'a1\'afZ\'a1\'af)
+\f1 \
+\
+#include <ctype.h>\
+\
+     int	isalpha(int c);\
+\
+\'97\'97\'97\'97\
+\
+Isdigit - 
+\f0 \'bd\'ca\'c1\'f8\'b9\'fd
+\f1  
+\f0 \'bc\'fd\'c0\'da char\'c0\'ce\'c1\'f6
+\f1  
+\f0 \'c5\'d7\'bd\'ba\'c6\'ae
+\f1  (\'910\'92~\'929\'92)\
+\
+	int	isdigit(int c);\
+
+\f0 \
+Unsigned char\'b0\'a1 \'bd\'ca\'c1\'f8\'b9\'fd \'bc\'f6\'b0\'a1 \'be\'c6\'b4\'cf\'b8\'e9 0 \'b8\'ae\'c5\'cf\
+\'bd\'ca\'c1\'f8\'b9\'fd \'bc\'f6\'c0\'cc\'b8\'e9 non-zero \'b8\'ae\'c5\'cf
+\f1 \
+\
+Isalnum\
+\
+\'97\'97\'97\'97\
+\
+isascii\
+\
+isprint\
+\
+Toupper\
+\
+tolower\
+\
+\'97\'97\'97\'97\
+
+\fs26 \
 < 
 \f0 Part 2 - \'c3\'df\'b0\'a1 \'c7\'d4\'bc\'f6\'b5\'e9>
 \f1\fs20 \

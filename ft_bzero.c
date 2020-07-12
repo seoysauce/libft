@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 21:30:21 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/05 17:59:59 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/12 12:41:51 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-#include <stdio.h>
-int		main(void)
-{
-	char str[] = "Hello world!";
-	ft_bzero(str, 4);
-	printf("%s\n", str);
-}
-*/

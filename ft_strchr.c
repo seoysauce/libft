@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 21:04:38 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/12 01:00:32 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/12 12:44:32 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return ((char *)s+i);
+			return ((char *)s + i);
 		i++;
 	}
 	if (s[i] == c)
-		return ((char *)s+i);
+		return ((char *)s + i);
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-     char *new;
-
-     new = ft_strchr("", '\0');
-     printf("%s\n", new);
-}
-*/

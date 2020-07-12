@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 18:01:22 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/12 00:17:39 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/12 12:43:32 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (len);
 }
-
-/*
-** #include <string.h>
-** #include <stdio.h>
-** int		main(void)
-** {
-** 	char *str = "Hello world!";
-**
-** 	printf("%lu\n", ft_strlen(str));
-** }
-*/

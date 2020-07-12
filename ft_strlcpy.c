@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 18:01:53 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/05 18:02:27 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/12 12:43:27 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 	}
 	return (src_len);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int		main(void)
-{
-	char str1[] = "hello";
-	char *str2 = "123456";
-
-	printf("%lu\n", ft_strlcpy(str1, str2, 3));
-	printf("%s\n", str1);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 22:59:04 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/03 22:39:48 by seoyoungj        ###   ########.fr       */
+/*   Updated: 2020/07/12 12:42:41 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int		main(void)
-{
-	//char str1[] = "Hello world!";
-	//char str2[] = "abcdefg";
-	char *str1 = NULL;
-	char *str2 = NULL;
-	ft_memcpy(str1, str2, 5);
-	//memcpy(str1, str2, 10);
-	printf("%s\n", str1);
-	printf("%lu\n", sizeof(str1));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 18:30:24 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/03 23:47:38 by seoyoungj        ###   ########.fr       */
+/*   Updated: 2020/07/12 12:42:51 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int		main(void)
-{
-	char str1[] = "Hello my name is Jiyong!";
-	//memmove(str1 + 17, str1, 5);
-	ft_memmove(str1 + 17, str1, 5);
-	printf("%s\n", str1);
-}
-*/

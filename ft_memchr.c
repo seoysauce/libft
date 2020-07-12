@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 20:36:17 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/11 20:40:46 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/12 12:42:16 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-// int		main(void)
-// {
-// 	char *str1 = "Hello there!";
-// 	char *new;
-
-// 	new = memchr(str1, 't', 10);
-// 	printf("%s\n", new);
-// }

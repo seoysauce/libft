@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 18:01:01 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/05 18:01:10 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/12 12:42:23 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char *str1 = "aaaaaaa";
-	char *str2 = "aaccaaa";
-
-	//printf("%d\n", memcmp(str1, str2, 5));
-	printf("%d\n", memcmp(str1, str2, 5));
-}
-*/

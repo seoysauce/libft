@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 18:02:47 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/11 20:47:47 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/12 12:43:22 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,3 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 		result = result + dst_len;
 	return (result);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int		main(void)
-{
-	char str1[] = "Hello world!";
-	char *str2 = "abcdefg";
-	printf("%lu\n", strlcat(str1, str2, 4));
-}
-*/
