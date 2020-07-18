@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/05 18:01:01 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/16 18:24:11 by seojeong         ###   ########.fr       */
+/*   Created: 2020/07/17 18:57:15 by seojeong          #+#    #+#             */
+/*   Updated: 2020/07/17 19:00:12 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	size_t	i;
 
-	i = 0;
-	while (i < n)
-	{
-		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
-		i++;
-	}
-	return (0);
+
+#include <stdio.h>
+#include <string.h>
+int	main()
+{
+	printf("%d\n", substr("NaverBlog", 1, 5));
 }
