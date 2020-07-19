@@ -6,7 +6,13 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 18:03:29 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/12 12:45:15 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/19 16:16:34 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	**ft_split(char const *s, char c)
+{
+
+}

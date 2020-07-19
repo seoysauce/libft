@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/17 18:57:15 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/18 18:03:19 by seojeong         ###   ########.fr       */
+/*   Created: 2020/07/18 17:47:46 by seojeong          #+#    #+#             */
+/*   Updated: 2020/07/18 17:58:53 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *substr;
-	size_t i;
+	char *newstr;
+	char *pnew;
 
-	i = 0;
-	substr = (char *)malloc(len + 1);
-	while (i < len)
+	if ((newstr = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)) == NULL)
+		return (NULL);
+	pnew = newstr;
+	while (*s1)
 	{
-		substr[i] = s[start + i];
-		i++;
+		*newstr = *s1;
+		newstr++;
+		s1++;
 	}
-	substr[i] = '\0';
-	return (substr);
+	while (*s2)
+	{
+		*newstr = *s2;
+		newstr++;
+		s2++;
+	}
+	*newstr = '\0';
+	return (pnew);
 }

@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/17 18:57:15 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/18 18:03:19 by seojeong         ###   ########.fr       */
+/*   Created: 2020/07/19 16:16:59 by seojeong          #+#    #+#             */
+/*   Updated: 2020/07/19 16:17:27 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_itoa(int n)
 {
-	char *substr;
-	size_t i;
 
-	i = 0;
-	substr = (char *)malloc(len + 1);
-	while (i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
 }
