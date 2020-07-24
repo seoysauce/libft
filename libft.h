@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 22:23:00 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/18 17:47:06 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/24 19:03:43 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@
 # include <stdlib.h>
 
 # define IS_WSPACE(c) (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f' || c == '\v')
+
+# define CHECK_PTR_DEF(ptr, def) if (!(ptr)) return (def);
+# define CHECK_PTR(ptr) CHECK_PTR_DEF(ptr, NULL);
+# define CHECK_MALLOC(var, size) CHECK_PTR((var = malloc(size)))
+
+# define MIN(a, b) (((a) < (b)) ? (a) : (b))
+# define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
 typedef struct	s_list
 {

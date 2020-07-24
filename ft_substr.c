@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 18:57:15 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/18 18:03:19 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/21 19:25:10 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
-	size_t i;
+	char	*substr;
+	size_t	i;
 
 	i = 0;
 	substr = (char *)malloc(len + 1);

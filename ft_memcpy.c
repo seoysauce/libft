@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 22:59:04 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/12 12:42:41 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/20 15:52:35 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (dst == NULL & src == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	while (i < n)
 	{
