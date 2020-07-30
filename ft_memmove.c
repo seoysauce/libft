@@ -6,36 +6,37 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 18:30:24 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/29 17:57:42 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/30 20:27:16 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t			x;
-	unsigned char	*pdst;
-	unsigned char	*psrc;
+	char			step;
+	size_t			index;
+	unsigned char	*dest;
+	unsigned char	*source;
 
-	pdst = (unsigned char*)dst;
-	psrc = (unsigned char*)src;
-	x = -1;
-	if (pdst < psrc)
-		while (++x < len)
-			pdst[x] = psrc[x];
-	else
-		while (len-- > 0)
-			pdst[len] = psrc[len];
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	step = +1;
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
+	if (dst > src)
+	{
+		step = -1;
+		dest = (unsigned char *)(dst + n - 1);
+		source = (unsigned char *)(src + n - 1);
+	}
+	index = 0;
+	while (index < n)
+	{
+		*dest = *source;
+		dest += step;
+		source += step;
+		index++;
+	}
 	return (dst);
 }
-
-/*
-#include <stdio.h>
-int		main(void)
-{
-	char str[] = "memmove can be very useful......";
-	ft_memmove(str + 20, str + 15, 11);
-	puts(str);
-}
-*/

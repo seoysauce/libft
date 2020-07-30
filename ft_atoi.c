@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 12:41:32 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/12 14:31:11 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/30 20:40:53 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,12 @@ int		ft_atoi(const char *str)
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
-		if (str[i] == '-')
-		{
+		if (str[i++] == '-')
 			minus *= -1;
-		}
-		i++;
 	}
 	while (ft_isdigit(str[i]))
 	{
-		res *= 10;
-		res += str[i] - '0';
+		res = res * 10 + str[i] - '0';
 		i++;
 	}
 	return (res * minus);

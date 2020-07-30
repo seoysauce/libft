@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 17:18:37 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/17 18:51:10 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/30 19:20:22 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	char	*duplicate;
 
 	len = ft_strlen(s1);
+	if (!(duplicate = ft_calloc(len + 1, sizeof(char))))
+		return (NULL);
 	duplicate = ft_calloc(len + 1, sizeof(char));
 	ft_memcpy(duplicate, s1, len);
 	duplicate[len] = '\0';

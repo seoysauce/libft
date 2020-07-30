@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 18:01:53 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/12 12:43:27 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/30 20:39:51 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 	size_t src_len;
 	size_t len;
 
+	if (!dst || !src)
+		return (0);
 	src_len = ft_strlen(src);
 	if (dstsize)
 	{

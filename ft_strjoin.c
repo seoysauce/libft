@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 17:47:46 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/18 17:58:53 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:34:53 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char *newstr;
 	char *pnew;
 
+	if (!s1 || !s2)
+		return (NULL);
 	if ((newstr = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)) == NULL)
 		return (NULL);
 	pnew = newstr;
