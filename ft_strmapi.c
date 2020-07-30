@@ -1,54 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 16:16:59 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/30 22:13:13 by seojeong         ###   ########.fr       */
+/*   Created: 2020/07/30 22:18:58 by seojeong          #+#    #+#             */
+/*   Updated: 2020/07/30 22:23:12 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	number_size(long number)
+char	*ft_strmapi(char const *s, char (*f)(unsigned
+int, char))
 {
-	size_t	size;
-
-	size = (number < 0 ? 1 : 0);
-	while (1)
-	{
-		number /= 10;
-		size++;
-		if (number == 0)
-			break ;
-	}
-	return (size);
-}
-
-char	*ft_itoa(int n)
-{
+	size_t	i;
+	size_t	len;
 	char	*new;
-	size_t	size;
-	long	num;
 
-	num = n;
-	size = number_size(num);
-	if (!(new = (char *)malloc(sizeof(char) * (size + 1))))
+	if (!s)
+		return (0);
+	i = 0;
+	len = ft_strlen(s);
+	if (!(new = malloc(len + 1)))
 		return (NULL);
-	if (num < 0)
+	while (i < len)
 	{
-		new[0] = '-';
-		num *= -1;
+		new[i] = (*f)(i, s[i]);
+		i++;
 	}
-	new[size] = '\0';
-	while (1)
-	{
-		new[--size] = num % 10 + '0';
-		num /= 10;
-		if (num == 0)
-			break ;
-	}
+	new[i] = '\0';
 	return (new);
 }

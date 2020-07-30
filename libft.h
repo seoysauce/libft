@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 22:23:00 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/24 19:03:43 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/07/30 22:18:18 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-//ft_strmapi
+char	*ft_strmapi(char const *s, char (*f)(unsigned
+int, char));
 //ft_putchar_fd
 //ft_putstr_fd
 //ft_putendl_fd
