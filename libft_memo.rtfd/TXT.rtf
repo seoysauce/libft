@@ -762,8 +762,6 @@ malloc\'c0\'b8\'b7\'ce \'c7\'d2\'b4\'e7\'c7\'cf\'b0\'ed \'c0\'ce\'bc\'f6\'b7\'ce
 \
 ft_strmapi\
 \
-\
-\
 ft_putchar_fd\
 \
 ft_putstr_fd\
@@ -797,5 +795,48 @@ next: \'b4\'d9\'c0\'bd element \'c0\'c7 \'c1\'d6\'bc\'d2 (\'b8\'b6\'c1\'f6\'b8\'
 - make bonus \'b8\'ed\'b7\'c9\'be\'ee\'b7\'ce libft.a \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae\'bf\'a1 \'ba\'b8\'b3\'ca\'bd\'ba \'c7\'d4\'bc\'f6 \'c3\'df\'b0\'a1\'b5\'c7\'b0\'d4\
 - .c \'c6\'c4\'c0\'cf\'b0\'fa \'c7\'ec\'b4\'f5\'bf\'a1 _bonus \'c3\'df\'b0\'a1\'c7\'d2 \'c7\'ca\'bf\'e4 x. (\'ba\'b8\'b3\'ca\'bd\'ba \'c7\'d4\'bc\'f6\'b5\'e9 \'c0\'d6\'b4\'c2 \'c6\'c4\'c0\'cf\'b5\'e9\'bf\'a1\'b8\'b8 \'c3\'df\'b0\'a1)\
 - ft_1stnew / ft_1stadd_front / ft_1stsize / ft_1stlast / ft_1stadd_back / ft_1stdelone / ft_1stclear / ft_1stiter / ft_1stmap\
+\
+\
+\
+\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 unit test, war machine \'c7\'d4\'bc\'f6\'ba\'b8\'bf\'cf\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+1. Memmove\
+[fail]: your memmove does not support the overlap (test 2)\
+[crash]: your memmove does not well with NULL as both parameters and size\
+\
+\
+\
+\
+2. Strlcpy\
+Function not protected\
+\
+3. strnstr\
+[fail]: your strnstr does not work with empty strings and 0 length\
+[fail]: your strnstr does not work with empty strings and 0 length\
+\
+4. Atoi\
+[KO]: your atoi does not work with over long max value\
+[KO]: your atoi does not work with over long min value\
+\
+5. Strdup\
+[crash]: you didn't protect your malloc return\
+\
+6. Substr\
+[crash]: you did not protect your malloc\
+[fail]: your substr does not work when start >= ft_strlen(s)\
+Not protected\
+\
+7. Strjoin\
+Not protected\
+\
+8. Split\
+Not protected\
+\
+\uc0\u8212 \u8212 \
+\
+9. Strlcat\
+\
 \
 }
