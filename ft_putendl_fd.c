@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: seoyoungjeong <marvin@42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/30 22:31:45 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/01 12:10:00 by seoyoungj        ###   ########.fr       */
+/*   Created: 2020/08/01 13:38:57 by seoyoungj         #+#    #+#             */
+/*   Updated: 2020/08/01 13:44:25 by seoyoungj        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (fd < 0)
 		return ;
-	write(fd, &c, 1);
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
