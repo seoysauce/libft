@@ -6,17 +6,18 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 12:41:32 by seojeong          #+#    #+#             */
-/*   Updated: 2020/07/30 20:40:53 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/08/04 20:58:30 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 int		ft_atoi(const char *str)
 {
 	int					i;
 	int					minus;
-	unsigned long int	res;
+	unsigned long long	res;
 
 	i = 0;
 	minus = 1;
@@ -33,5 +34,8 @@ int		ft_atoi(const char *str)
 		res = res * 10 + str[i] - '0';
 		i++;
 	}
+	if (i > 19 || res >= LLONG_MAX)
+		return (minus == 1 ? -1 : 0);
 	return (res * minus);
 }
+
