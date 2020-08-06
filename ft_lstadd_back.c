@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/12 12:41:32 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/05 01:47:39 by seojeong         ###   ########.fr       */
+/*   Created: 2020/08/06 13:58:50 by seojeong          #+#    #+#             */
+/*   Updated: 2020/08/06 14:00:28 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
-int		ft_atoi(const char *str)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int					i;
-	int					minus;
-	unsigned long long	res;
+	t_list *last;
 
-	i = 0;
-	minus = 1;
-	res = 0;
-	while (IS_WSPACE(str[i]))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (!lst)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		if (str[i++] == '-')
-			minus *= -1;
+		last = ft_lstlast(*lst);
+		if (last != NULL)
+			last->next = new;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	if (i > 19 || res >= LLONG_MAX)
-		return (minus == 1 ? -1 : 0);
-	return (res * minus);
 }
