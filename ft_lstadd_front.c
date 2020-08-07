@@ -6,10 +6,9 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 13:48:10 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/07 17:47:18 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/08/07 18:48:19 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -20,19 +19,25 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-/*
+
+void	ft_lstadd_front2(t_list *lst, t_list new)
+{
+	new.next = lst;
+	lst = &new;
+}
 #include <stdio.h>
 int main(){
-	t_list* t1;
-	t_list* t2;
-	t_list tt1;
-	t1 = &tt1;
-	t_list tt2;
-	t2 = &tt2;
-	tt2.next = NULL;
-	tt1.next = NULL;
-	ft_lstadd_front(t1, t2);
-	printf("t1->next : %p t2->next : %p &t1 : %p\n ", t1->next, t2->next, t1);
+	t_list * head;
+	t_list t1;
+	t_list t2;
+	t_list t3;
+	t1.next = &t2;
+	t2.next = &t3;
+	head = &t1;
+	t_list t0;
+	printf("&t1 : %p\n", &t1);
+	ft_lstadd_front(&head, &t0);
+	printf("t0.next = %p\n ", t0.next);
 
 }
-*/
+

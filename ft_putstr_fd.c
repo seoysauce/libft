@@ -6,7 +6,7 @@
 /*   By: seoyoungjeong <marvin@42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/01 12:10:40 by seoyoungj         #+#    #+#             */
-/*   Updated: 2020/08/01 13:51:22 by seoyoungj        ###   ########.fr       */
+/*   Updated: 2020/08/07 21:37:45 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (fd < 0 || !s)
+	if (!s)
 		return ;
 	if (s)
 		write(fd, s, ft_strlen(s));

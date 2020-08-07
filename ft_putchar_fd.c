@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/30 22:31:45 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/06 16:29:35 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/08/07 19:07:36 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 ** (000800-00FFFF) 1110xxxx 10xxxxxx 10xxxxxx
 ** (010000-10FFFF) 11110zzz 10zzxxxx 10xxxxxx 10xxxxxx
 */
-
+/*
 int		*unicode_cal(int c, int *uni_c)
 {
 	if (c <= 0x07ff)
@@ -80,4 +80,22 @@ void	ft_putchar_fd(int c, int fd)
 		while (i < 4)
 			write(fd, &uni_c[i++], 1);
 	}
+}
+*/
+
+void	ft_putchar_fd(char c, int fd)
+{
+	unsigned char	uni_c[2];
+	int				i;
+
+	i = 0;
+	if ((unsigned char)c >= 128)
+	{
+		uni_c[0] = (unsigned char)c / 0x40 + UTF8_B2;
+		uni_c[1] = (unsigned char)c % 0x40 + UTF8_BX;
+		while (i < 2)
+			write(fd, &uni_c[i++], 1);
+	}
+	else
+		write(fd, &c, 1);
 }
