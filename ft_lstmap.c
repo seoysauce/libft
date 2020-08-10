@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/06 13:48:10 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/10 17:24:55 by seojeong         ###   ########.fr       */
+/*   Created: 2020/08/10 17:32:14 by seojeong          #+#    #+#             */
+/*   Updated: 2020/08/10 21:04:41 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
+			void (*del)(void *))
 {
-	if (!lst || !new)
-		return ;
-	new->next = *lst;
-	*lst = new;
+	t_list	*new;
+
+	if (!lst)
+		return (NULL);
+	if (!(new = ft_lstnew(f(lst->content))))
+		return (NULL);
+	if (!(new = (t_list *)malloc(sizeof(t_list));
+	(*new).content = f((*lst).content);
+	del((*lst).content);
+	free(lst);
+	return (new);
 }
