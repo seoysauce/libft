@@ -6,7 +6,7 @@
 #    By: seojeong <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/02 22:28:17 by seojeong          #+#    #+#              #
-#    Updated: 2020/08/12 17:16:42 by seojeong         ###   ########.fr        #
+#    Updated: 2020/08/12 17:37:03 by seojeong         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,16 +28,16 @@ FLAG	= -Wall -Wextra -Werror
 OPTION	= -c
 INCS	= .
 
-all: ${NAME}
+.c.o:
+	$(GCC) $(FLAG) $(OPTION) $< -o $(<:.c=.o) -I$(INCS)
 
 $(NAME): ${OBJECT}
-	ar rc $(NAME) $(OBJECT)
+	ar -rcs $(NAME) $(OBJECT)
+
+all: ${NAME}
 
 bonus: $(NAME) $(OBJECT_B)
-	ar rc $(NAME) $(OBJECT_B)
-
-.c.o:
-	${GCC} ${FLAG} ${OPTION} $< -o ${<:.c=.o} -I ${INCS}
+	ar -rcs $(NAME) $(OBJECT_B)
 
 clean:
 	rm -f $(OBJECT) $(OBJECT_B)
