@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:29:59 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/10 19:15:23 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/08/12 16:38:24 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*tmp;
-
-	if (!lst)
+	if (!lst || !f)
 		return ;
-	tmp = lst;
 	while (1)
 	{
-		f(tmp->content);
-		tmp = tmp->next;
-		if (tmp == NULL)
+		f(lst->content);
+		lst = lst->next;
+		if (lst == NULL)
 			return ;
 	}
 }

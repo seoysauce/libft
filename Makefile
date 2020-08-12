@@ -6,7 +6,7 @@
 #    By: seojeong <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/02 22:28:17 by seojeong          #+#    #+#              #
-#    Updated: 2020/08/10 17:40:52 by seojeong         ###   ########.fr        #
+#    Updated: 2020/08/12 17:16:42 by seojeong         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,22 +26,25 @@ OBJECT_B = $(SRCS_B:.c=.o)
 GCC		= gcc
 FLAG	= -Wall -Wextra -Werror
 OPTION	= -c
+INCS	= .
 
 all: ${NAME}
 
-$(NAME): ${OBJECT} libft.h
-	ar rc $(NAME) $(OBJECT) libft.h
+$(NAME): ${OBJECT}
+	ar rc $(NAME) $(OBJECT)
 
-bonus: $(OBJECT_B) $(OBJECT) libft.h
-	ar rc $(NAME) $(OBJECT_B) $(OBJECT) libft.h
+bonus: $(NAME) $(OBJECT_B)
+	ar rc $(NAME) $(OBJECT_B)
 
 .c.o:
-	${GCC} ${FLAG} ${OPTION} $< -o $@
+	${GCC} ${FLAG} ${OPTION} $< -o ${<:.c=.o} -I ${INCS}
 
 clean:
-	rm -f ${OBJECT} $(OBJECT_B)
+	rm -f $(OBJECT) $(OBJECT_B)
 
 fclean: clean
-	rm -f ${NAME}
+	rm -f $(NAME) $(bonus)
 
 re: fclean all
+
+.PHONY: all bonus clean fclean re .c.o

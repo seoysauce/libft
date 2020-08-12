@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 13:51:21 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/06 13:53:10 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/08/12 16:28:26 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int	ft_lstsize(t_list *lst)
 {
 	int		size;
-	t_list	*next;
+	t_list	*new;
 
 	size = 0;
-	next = lst;
-	while (next != NULL)
+	new = lst;
+	while (new != NULL)
 	{
-		next = next->next;
+		new = new->next;
 		size++;
 	}
 	return (size);
