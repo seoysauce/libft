@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/12 12:41:32 by seojeong          #+#    #+#             */
-/*   Updated: 2020/08/05 01:47:39 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/08/12 22:41:05 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int		ft_atoi(const char *str)
 	i = 0;
 	minus = 1;
 	res = 0;
-	while (IS_WSPACE(str[i]))
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+			|| str[i] == '\r' || str[i] == '\f' || str[i] == '\v')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
